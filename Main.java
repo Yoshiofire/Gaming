@@ -7,5 +7,3 @@ public class Main {
       System.out.println("Sum of x+y = " + z);
     }
 }
-
-System.out.println("Piss and shit");
