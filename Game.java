@@ -4,7 +4,6 @@ import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Graphics;
 
-
 public class Game extends JPanel implements Runnable{
   // will i need to setup a whole tile system? If so what is a good size?
   
@@ -24,11 +23,13 @@ public class Game extends JPanel implements Runnable{
 
   CollisionDetect CD = new CollisionDetect(this);
 
+  
+
+
   People people = new People("/People_Images/People.jpg");
-  People people2 = new People("/People_Images/People.jpg");
-  People people3 = new People("/People_Images/People.jpg");
-  People people4 = new People("/People_Images/People.jpg");
-  People people5 = new People("/People_Images/People.jpg");
+  
+
+
 
   //Game states
   public int gameState = 1; // for now we can say that. 
@@ -114,18 +115,9 @@ public class Game extends JPanel implements Runnable{
 
       switch(gameState){
         case 1: // default playing thing
-          people.collides = false;
-          player.collides = false;
           CD.checkObj(people, player);
-          if(!people.collides){
-            people.peopleMove(); //need this to move less, moving 60 times per second
-          }
-          
           player.playerMove();
-          // people2.peopleMove();
-          // people3.peopleMove();
-          // people4.peopleMove();
-          // people5.peopleMove();
+          people.peopleMove(); //need this to move less, moving 60 times per second
           
           break;
         case 2: // pause
@@ -151,10 +143,6 @@ public class Game extends JPanel implements Runnable{
       switch(gameState){
         case 1: // default playing thing
           people.draw(g2); //need this to move less, moving 60 times per second
-          // people2.draw(g2);
-          // people3.draw(g2);
-          // people4.draw(g2);
-          // people5.draw(g2);
           player.draw(g2);
           break;
         case 2: // pause

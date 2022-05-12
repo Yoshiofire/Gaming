@@ -23,7 +23,7 @@ public class People extends Entity{
     public void peopleMove(){
         int direction = (int) (Math.random() * 4);
         // int amount = (int) (Math.random() * 30);
-        int amount = 10;
+        int amount = 0;
         switch(direction){
             case 0:
                 direction = 83;

@@ -25,24 +25,61 @@ public class PlayerData extends Entity{
     }
 
     public void playerMove(){
+
+
+
+        //Instead of checking for collison in the game.java, we check inside of the move methods of the entites' subclasses
         if(!collides){
             if(key.upKey == true){
                 // getPlayerImage("up");
                 posY -= eSpeed;
+                movement = 87;
             }
             if(key.downKey == true){
                 // getPlayerImage("down");
                 posY += eSpeed;
+                movement = 83;
             }
             if(key.leftKey == true){
                 // getPlayerImage("left");
                 posX -= eSpeed;
+                movement = 65;
             }
             if(key.rightKey == true){
                 // getPlayerImage("right");
                 posX += eSpeed;
+                movement = 68;
             }
         }
+        else if(collides){
+            if(key.upKey == true){
+                // getPlayerImage("up");
+                movement = 87;
+            }
+            if(key.downKey == true){
+                // getPlayerImage("down");
+                movement = 83;
+            }
+            if(key.leftKey == true){
+                // getPlayerImage("left");
+                movement = 65;
+            }
+            if(key.rightKey == true){
+                // getPlayerImage("right");
+                movement = 68;
+            } 
+
+
+
+
+
+
+
+        }
+
+
+
+
         getPlayerImage(key.lastPressed);
         hitbox.setLocation(posX, posY);
     }
