@@ -142,6 +142,15 @@ public class Entity{
 
         BufferedImage i = this.sprite;
         g3.drawImage(i, posX, posY, sizeX, sizeY, null);
+        g3.draw(this.hitbox);
+
+    }
+    
+    public void drawHitboxes(Graphics2D g3){
+
+        // BufferedImage i = this.sprite;
+        // g3.drawImage(i, posX, posY, sizeX, sizeY, null);
+        g3.draw(this.hitbox);
 
     }
 

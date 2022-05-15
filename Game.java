@@ -146,6 +146,8 @@ public class Game extends JPanel implements Runnable{
           player.draw(g2);
           break;
         case 2: // pause
+          people.drawHitboxes(g2);
+          player.drawHitboxes(g2);
 
 
           break;

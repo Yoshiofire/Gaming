@@ -9,7 +9,8 @@ public class CollisionDetect{ // this is going t
 
     }
 
-    public void checkObj(Entity entity, PlayerData entity2){ // needs to be turned into an arraylist ig
+    public void checkObj(Entity entity, Entity entity2){ // needs to be turned into an arraylist ig
+        //First entity needs to be stationary second is the moving one
         // System.out.println(entity.movement);
 
 

@@ -2,12 +2,13 @@
 import java.io.IOException;
 // import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
+// import java.awt.Image;
 
 public class PlayerData extends Entity{
 
 
-    Game game;
-    KeyHandler key;
+    private Game game;
+    private KeyHandler key;
     // public BufferedImage sprite; // this one for the "character frames" ig
 
     public PlayerData(KeyHandler k, Game g){
